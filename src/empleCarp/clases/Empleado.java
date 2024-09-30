@@ -1,5 +1,7 @@
 package empleCarp.clases;
 
+import empleCarp.datos.*;
+
 import java.lang.annotation.Annotation;
 
 public abstract class Empleado implements DatoEmpleado {
