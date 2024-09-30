@@ -68,7 +68,13 @@ public class Empresa {
     }
 
     public void cargadorDeContextoDirectivo(){
+        DatoDirectivo[] datoDirectivos = Empresa.class.getAnnotationsByType(DatoDirectivo.class);
 
+        for (DatoDirectivo emp : datoDirectivos){
+            Empleado empleado;
+            empleado = new Directivo(emp.nombre(), emp.apellido(), emp.dni(), emp.direccion(), emp.telefono(), emp.codigoDespacho());
+            empleados.add(empleado);
+        }
     }
 
     public void cargadorDeContexto() {
