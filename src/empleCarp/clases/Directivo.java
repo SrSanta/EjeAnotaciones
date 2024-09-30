@@ -1,4 +1,4 @@
-package empleCarp;
+package empleCarp.clases;
 
 public class Directivo extends Empleado {
     private int codigoDespacho;

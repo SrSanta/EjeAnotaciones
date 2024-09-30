@@ -1,4 +1,4 @@
-package empleCarp;
+package empleCarp.clases;
 
 public class Tecnico extends Operario{
     private String perfil;

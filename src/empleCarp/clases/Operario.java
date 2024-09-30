@@ -1,4 +1,4 @@
-package empleCarp;
+package empleCarp.clases;
 
 public class Operario extends Empleado{
     private int codigoTaller;

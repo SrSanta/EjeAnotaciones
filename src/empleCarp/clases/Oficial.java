@@ -1,4 +1,4 @@
-package empleCarp;
+package empleCarp.clases;
 
 public class Oficial extends Operario{
     private String categoria;

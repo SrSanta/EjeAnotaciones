@@ -1,4 +1,4 @@
-package empleCarp;
+package empleCarp.datos.oficial;
 
 import java.lang.annotation.*;
 
@@ -7,6 +7,6 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
 
-public @interface DatosEmpleados {
-    DatoEmpleado[] value();
+public @interface DatosOficiales {
+    DatoOficial[] value();
 }

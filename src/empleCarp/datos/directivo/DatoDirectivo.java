@@ -1,4 +1,4 @@
-package empleCarp;
+package empleCarp.datos.directivo;
 
 import java.lang.annotation.*;
 
@@ -6,9 +6,9 @@ import java.lang.annotation.*;
 @Inherited
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-@Repeatable(DatosEmpleados.class)
+@Repeatable(DatosDirectivos.class)
 
-public @interface DatoEmpleado {
+public @interface DatoDirectivo{
     String nombre() default "";
     String apellido() default "";
     String dni() default "";
@@ -16,7 +16,4 @@ public @interface DatoEmpleado {
     int telefono() default 0;
     String clase() default "";
     int codigoDespacho() default 0;
-    int codigoTaller()default 0;
-    String perfil() default "";
-    String categoria() default "";
 }
