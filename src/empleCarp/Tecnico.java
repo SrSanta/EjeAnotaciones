@@ -7,4 +7,11 @@ public class Tecnico extends Operario{
         super(nombre, apellido, dni, direccion, telefono, codigoTaller);
         this.perfil = perfil;
     }
+
+    @Override
+    public String toString() {
+        return "Tecnico{" +
+                "perfil='" + perfil + '\'' +
+                "} " + super.toString();
+    }
 }

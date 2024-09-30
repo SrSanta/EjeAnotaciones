@@ -71,4 +71,14 @@ public abstract class Empleado implements DatoEmpleado{
     public Class<? extends Annotation> annotationType() {
         return null;
     }
+
+    @Override
+    public String toString() {
+        return
+                "nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", dni='" + dni + '\'' +
+                ", direccion='" + direccion + '\'' +
+                ", telefono=" + telefono;
+    }
 }

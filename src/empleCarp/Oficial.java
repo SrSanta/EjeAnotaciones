@@ -7,4 +7,11 @@ public class Oficial extends Operario{
         super(nombre, apellido, dni, direccion, telefono, codigoTaller);
         this.categoria = categoria;
     }
+
+    @Override
+    public String toString() {
+        return "Oficial{" +
+                "categoria='" + categoria + '\'' +
+                "} " + super.toString();
+    }
 }

@@ -7,4 +7,11 @@ public class Directivo extends Empleado {
         super(nombre, apellido, dni, direccion, telefono);
         this.codigoDespacho = codigoDespacho;
     }
+
+    @Override
+    public String toString() {
+        return "Directivo{" +
+                "codigoDespacho=" + codigoDespacho +
+                "} " + super.toString();
+    }
 }

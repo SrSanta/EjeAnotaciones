@@ -7,4 +7,10 @@ public class Operario extends Empleado{
         super(nombre, apellido, dni, direccion, telefono);
         this.codigoTaller = codigoTaller;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                "codigoTaller=" + codigoTaller;
+    }
 }
