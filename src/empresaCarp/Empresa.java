@@ -95,7 +95,7 @@ public class Empresa {
 
         for (DatoTecnico emp : datoDirectivos){
             Empleado empleado;
-            empleado = new Oficial(emp.nombre(), emp.apellido(), emp.dni(), emp.direccion(), emp.telefono(), emp.codigoTaller(), emp.perfil());
+            empleado = new Tecnico(emp.nombre(), emp.apellido(), emp.dni(), emp.direccion(), emp.telefono(), emp.codigoTaller(), emp.perfil());
             empleados.add(empleado);
         }
     }
