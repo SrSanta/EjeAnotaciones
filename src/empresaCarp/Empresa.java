@@ -60,11 +60,14 @@ public class Empresa {
 
     public Empresa() {
         this.nombre = "";
-        cargadorDeContexto();
+        //cargadorDeContexto();
+        cargadorDeContextoAhoraEsPersonal();
     }
 
     public void cargadorDeContextoAhoraEsPersonal(){
-
+        cargadorDeContextoDirectivo();
+        cargadorDeContextoOficiales();
+        cargadorDeContextoTecnicos();
     }
 
     public void cargadorDeContextoDirectivo(){
@@ -73,6 +76,26 @@ public class Empresa {
         for (DatoDirectivo emp : datoDirectivos){
             Empleado empleado;
             empleado = new Directivo(emp.nombre(), emp.apellido(), emp.dni(), emp.direccion(), emp.telefono(), emp.codigoDespacho());
+            empleados.add(empleado);
+        }
+    }
+
+    public void cargadorDeContextoOficiales(){
+        DatoOficial[] datoDirectivos = Empresa.class.getAnnotationsByType(DatoOficial.class);
+
+        for (DatoOficial emp : datoDirectivos){
+            Empleado empleado;
+            empleado = new Oficial(emp.nombre(), emp.apellido(), emp.dni(), emp.direccion(), emp.telefono(), emp.codigoTaller(), emp.categoria());
+            empleados.add(empleado);
+        }
+    }
+
+    public void cargadorDeContextoTecnicos(){
+        DatoTecnico[] datoDirectivos = Empresa.class.getAnnotationsByType(DatoTecnico.class);
+
+        for (DatoTecnico emp : datoDirectivos){
+            Empleado empleado;
+            empleado = new Oficial(emp.nombre(), emp.apellido(), emp.dni(), emp.direccion(), emp.telefono(), emp.codigoTaller(), emp.perfil());
             empleados.add(empleado);
         }
     }
